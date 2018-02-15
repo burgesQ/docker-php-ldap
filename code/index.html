@@ -1,0 +1,55 @@
+<h1>This is a LDAP poc !</h1>
+
+<form method="post" data-form-title="LDAP FORM" action="HandleForm.php">
+    <input type="hidden" value="" data-form-email="true">
+    <div>
+        <label for="host">Host :</label>
+        <input type="text"
+               name="host"
+               id="host"
+               required=""
+               placeholder="LDAP host"
+               data-form-field="host">
+    </div>
+    <div>
+        <label for="ldap_dn">LDAP dn :</label>
+        <input type="text"
+               name="ldap_dn"
+               id="ldap_dn"
+               required=""
+               placeholder="LDAP dn"
+               data-form-field="ldap_dn">
+    </div>
+
+    <div>
+        <label for="group">Extra Group :</label>
+        <input type="text"
+               name="group"
+               id="group"
+               placeholder="Extra Group"
+               data-form-field="group">
+    </div>
+
+    <div>
+        <label for="username">Username :</label>
+        <input type="text"
+               name="username"
+               id="username"
+               required=""
+               placeholder="Username"
+               data-form-field="username">
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password :</label>
+        <input type="text"
+               name="password"
+               id="password"
+               required=""
+               placeholder="Password"
+               data-form-field="password">
+    </div>
+    <div><button type="submit"
+                name="submit"
+                id="submit">Test That</button></div>
+</form>
