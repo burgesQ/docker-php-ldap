@@ -42,9 +42,9 @@ You can then access the phpLDAPadmin at https://$IP_LDAP and log with those cred
 |:--------------------------:|:--------:|
 | cn=admin,dc=example,dc=org | admin    |
 
-### Frafos Entries
+### LDAP Entries
 
-You can load the frafos ldap entries this way : 
+You can load the ldap entries this way : 
 
 ```sh
 11:00:17 ❯ docker exec -it dockerldapphp_ldap_1 ldapadd -x -D "cn=admin,dc=example,dc=org" -w admin -H ldap:// -f /ldap_entries/add_content.ldif
