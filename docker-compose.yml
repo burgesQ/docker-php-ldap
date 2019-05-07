@@ -4,22 +4,29 @@ services:
 
   ldap:
     image: osixia/openldap:1.1.8
+    container_name: ldap
     hostname: ldap
-    volumes:
-        - ./ldap_entries:/ldap_entries/
+    network_mode: "host"
+    # ports:
+    #   - 389:389
+    #   - 636:636
+    # volumes:
+    #   - ./ldap_entries:/ldap_entries/
+      # :/var/lib/ldap
+      # /etc/ldap/sladp.d
 
-  ldapadmin:
-    image: osixia/phpldapadmin:0.7.1
-    hostname: phpldapadmin-service
-    links:
-      - ldap:ldapadmin
-    environment:
-      PHPLDAPADMIN_LDAP_HOSTS: "ldapadmin"
-      PHPLDAPADMIN_HTTPS=false:
+  # ldapadmin:
+  #   image: osixia/phpldapadmin:0.7.1
+  #   hostname: ldapadmin
+  #   links:
+  #     - ldap:ldapadmin
+  #   environment:
+  #     PHPLDAPADMIN_LDAP_HOSTS: "ldapadmin"
+  #     PHPLDAPADMIN_HTTPS=false:
 
-  php:
-    build: php5.4-apache
-    ports:
-     - 80:80
-    volumes:
-     - ./code:/var/www/html
+  # php:
+  #   build: php5.4-apache
+  #   ports:
+  #    - 80:80
+  #   volumes:
+  #    - ./code:/var/www/html

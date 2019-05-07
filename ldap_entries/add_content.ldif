@@ -6,9 +6,14 @@ dn: ou=Groups,dc=example,dc=org
 objectClass: organizationalUnit
 ou: Groups
 
-dn: cn=miners,ou=Groups,dc=example,dc=org
+# dn: cn=miners,ou=Groups,dc=example,dc=org
+# objectClass: posixGroup
+# cn: miners
+# gidNumber: 5000
+
+dn: cn=GUI,ou=Groups,dc=example,dc=org
 objectClass: posixGroup
-cn: miners
+cn: GUI
 gidNumber: 5000
 
 dn: uid=john,ou=People,dc=example,dc=org
