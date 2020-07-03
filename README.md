@@ -1,12 +1,12 @@
 # docker-ldap-php
 
-# Part One : Install docker
+# Install docker
 
 You'll need both [docker-machine](https://docs.docker.com/machine/install-machine/#install-machine-directly) and [docker-compose](https://docs.docker.com/compose/install/) on your machine.
 
 Before running the docker, please ensure that any service are running on both port 80 and 389 of your host machine.
 
-# Part Two : How to use the stack
+# How to use the stack
 
 ## 1. Build the docker images
 ```
@@ -56,7 +56,7 @@ You can then update the password for a specific user from the phpldapadmin inter
 
 ### php code
 
-All php code present in the ./code directory can be reached on `localhost` or `127.0.0.1`
+All php code present in the `./src` directory can be reached on `localhost` or `127.0.0.1`
 
 ### php code specific 
 
@@ -87,7 +87,10 @@ You can remove the stack by running :
 docker-compose down
 ```
 
-# TODO
+# Contributuing
 
-- [x] how to
-- [x] basic login ok 
+First of all, **thank you** for contributing :hearts:
+
+If you find any typo/misconfiguration/... please send me a PR or open an issue. You can also ping me on twitter.
+
+Also, while creating your Pull Request on GitHub, please write a description which gives the context and/or explains why you are creating it.
